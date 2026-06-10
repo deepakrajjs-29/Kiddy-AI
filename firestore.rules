@@ -1,0 +1,65 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Helper function to check if the requesting user is authenticated
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    // Helper function to check if the requesting user is checking their own record
+    function isOwner(userId) {
+      return isAuthenticated() && request.auth.uid == userId;
+    }
+
+    // Helper function to check if the requesting user is an administrator
+    function isAdmin() {
+      return isAuthenticated() && 
+        exists(/databases/$(database)/documents/users/$(request.auth.uid)) &&
+        get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'admin';
+    }
+
+    // Users Collection rules
+    match /users/{userId} {
+      // Any authenticated user can create their own profile record during registration
+      allow create: if isAuthenticated() && request.auth.uid == userId;
+      
+      // A user can read their own profile, or admins can read all profiles
+      allow read: if isOwner(userId) || isAdmin();
+      
+      // Admins can update any profile.
+      // Owners can update their own profile, but must NOT change critical fields like role, status, email, or uid
+      allow update: if isAdmin() || (
+        isOwner(userId) && 
+        request.resource.data.role == resource.data.role && 
+        request.resource.data.status == resource.data.status && 
+        request.resource.data.email == resource.data.email && 
+        request.resource.data.uid == resource.data.uid
+      );
+      
+      // Only admins can delete student profiles
+      allow delete: if isAdmin();
+    }
+
+    // Contact form inquiries rules
+    match /contacts/{contactId} {
+      // Anyone (even unauthenticated site visitors) can submit the contact form
+      allow create: if true;
+      
+      // Only administrators can read or delete contact inquiries
+      allow read, delete: if isAdmin();
+      
+      // Contact messages are read-only and cannot be modified once created
+      allow update: if false;
+    }
+
+    // Announcements rules
+    match /announcements/{announcementId} {
+      // Anyone can read announcements (students, admins, or homepage visitors)
+      allow read: if true;
+      
+      // Only administrators can create, update, or delete announcements
+      allow write: if isAdmin();
+    }
+  }
+}

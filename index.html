@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiddy.ai - AI & Coding Bootcamp for Kids & Teens</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Global Loading Spinner -->
+    <div id="global-loader" class="loader-overlay hidden">
+        <div class="spinner-custom"></div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light navbar-custom fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <span class="text-primary fw-extrabold me-1"><i class="bi bi-rocket-takeoff-fill"></i> Kiddy</span><span class="text-secondary fw-bold">.ai</span>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link px-3 active" href="#hero">Home</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#curriculum">Curriculum</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#trainers">Trainers</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#faq">FAQ</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#contact">Contact</a></li>
+                    
+                    <!-- Dynamic Auth Nav Items -->
+                    <li class="nav-item ms-lg-3 mt-3 mt-lg-0" id="nav-auth-buttons">
+                        <a href="login.html" class="btn btn-outline-custom me-2 btn-sm px-3">Login</a>
+                        <a href="register.html" class="btn btn-primary-custom btn-sm px-3 text-white">Register</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section d-flex align-items-center min-vh-100">
+        <div class="container">
+            <div class="row align-items-center gy-5">
+                <div class="col-lg-6 text-center text-lg-start fade-in">
+                    <span class="badge bg-secondary text-white mb-3 px-3 py-2" style="letter-spacing: 1px; font-weight: 600;">✨ NEXT GENERATION AI BOOTCAMP</span>
+                    <h1 class="hero-title fw-extrabold text-main">Empower Your Child to Build the <span class="text-gradient">Future with AI</span></h1>
+                    <p class="lead text-muted mb-4">A structured, beginner-friendly 4-week virtual bootcamp for young minds to master artificial intelligence, prompt engineering, and visual programming.</p>
+                    <div class="d-flex flex-column flex-sm-row justify-content-center justify-content-lg-start gap-3">
+                        <a href="register.html" class="btn btn-primary-custom btn-lg py-3 px-4 text-white">Register Now <i class="bi bi-arrow-right-short ms-1"></i></a>
+                        <a href="#about" class="btn btn-outline-custom btn-lg py-3 px-4">Learn More</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <!-- Modern Tech Illustration using Styled SVGs & Cards -->
+                    <div class="position-relative d-inline-block p-4">
+                        <div class="glass-panel p-4 shadow-xl position-relative z-3" style="max-width: 450px;">
+                            <div class="d-flex align-items-center justify-content-between border-bottom pb-3 mb-3">
+                                <div class="d-flex align-items-center gap-2">
+                                    <span class="d-inline-block bg-danger rounded-circle" style="width:12px; height:12px;"></span>
+                                    <span class="d-inline-block bg-warning rounded-circle" style="width:12px; height:12px;"></span>
+                                    <span class="d-inline-block bg-success rounded-circle" style="width:12px; height:12px;"></span>
+                                </div>
+                                <span class="badge bg-light text-primary border px-2 py-1 small">Live AI Playground</span>
+                            </div>
+                            <div class="text-start">
+                                <h6 class="fw-bold mb-2"><i class="bi bi-cpu text-primary me-2"></i> Kiddy.ai Visual Builder</h6>
+                                <p class="text-muted small">Arrange building blocks to program your custom neural network model.</p>
+                                <div class="mb-3 p-3 bg-light rounded border border-dashed text-center">
+                                    <span class="text-primary small fw-semibold"><i class="bi bi-plus-circle me-1"></i> Drag & Drop Coding Block</span>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="text-muted small"><i class="bi bi-check2-all text-success me-1"></i> Output: 98.4% Accuracy</span>
+                                    <button class="btn btn-sm btn-secondary-custom px-3" disabled>Run Model</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Decorative floating circles -->
+                        <div class="position-absolute bg-primary opacity-10 rounded-circle top-0 start-0" style="width: 120px; height: 120px; filter: blur(20px);"></div>
+                        <div class="position-absolute bg-secondary opacity-15 rounded-circle bottom-0 end-0" style="width: 160px; height: 160px; filter: blur(30px);"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Bootcamp Section -->
+    <section id="about" class="py-5" style="background: white;">
+        <div class="container py-5">
+            <div class="row align-items-center gy-5">
+                <div class="col-lg-6">
+                    <div class="pe-lg-5">
+                        <span class="text-primary fw-bold text-uppercase small" style="letter-spacing: 1px;">About the Bootcamp</span>
+                        <h2 class="fw-bold mt-2 mb-4 fs-1">Curated to Shape Tomorrow's Innovators</h2>
+                        <p class="text-muted mb-4">The Kiddy.ai Bootcamp is an immersive, project-based educational program designed specifically for students aged 10-18. We take young learners on a journey from basic computer operations to deploying interactive AI applications.</p>
+                        
+                        <div class="row g-4">
+                            <div class="col-sm-6">
+                                <div class="d-flex gap-3">
+                                    <div class="icon-box icon-primary m-0 flex-shrink-0" style="width: 40px; height: 40px; font-size: 1rem; border-radius: 8px;">
+                                        <i class="bi bi-journal-code"></i>
+                                    </div>
+                                    <div>
+                                        <h6 class="fw-bold mb-1">Tailored Syllabus</h6>
+                                        <p class="text-muted small mb-0">Customized content for beginners with no coding background.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="d-flex gap-3">
+                                    <div class="icon-box icon-secondary m-0 flex-shrink-0" style="width: 40px; height: 40px; font-size: 1rem; border-radius: 8px;">
+                                        <i class="bi bi-people-fill"></i>
+                                    </div>
+                                    <div>
+                                        <h6 class="fw-bold mb-1">Group Learning</h6>
+                                        <p class="text-muted small mb-0">Interactive peer circles that build collaborative skills.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card glass-panel p-4 shadow-lg border-0">
+                        <h4 class="fw-bold mb-4"><i class="bi bi-trophy text-accent me-2"></i> What Students Gain</h4>
+                        <ul class="list-unstyled mb-0">
+                            <li class="d-flex align-items-start mb-3">
+                                <i class="bi bi-check-circle-fill text-success me-3 mt-1"></i>
+                                <div>
+                                    <h6 class="fw-bold mb-0">Solid Coding Fundamentals</h6>
+                                    <p class="text-muted small mb-0">Learn logical structures, variables, loops, and conditions.</p>
+                                </div>
+                            </li>
+                            <li class="d-flex align-items-start mb-3">
+                                <i class="bi bi-check-circle-fill text-success me-3 mt-1"></i>
+                                <div>
+                                    <h6 class="fw-bold mb-0">AI/Prompt Engineering Expertise</h6>
+                                    <p class="text-muted small mb-0">Formulate high-performance prompts to solve complex tasks.</p>
+                                </div>
+                            </li>
+                            <li class="d-flex align-items-start">
+                                <i class="bi bi-check-circle-fill text-success me-3 mt-1"></i>
+                                <div>
+                                    <h6 class="fw-bold mb-0">Global Certification</h6>
+                                    <p class="text-muted small mb-0">Receive a verified graduation certificate to display proudly.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Join Us Section -->
+    <section class="py-5 bg-light">
+        <div class="container py-5">
+            <div class="text-center max-width-600 mx-auto mb-5">
+                <span class="text-primary fw-bold text-uppercase small" style="letter-spacing: 1px;">Why Kiddy.ai?</span>
+                <h2 class="fw-bold mt-2">Why Our Bootcamp Stands Out</h2>
+                <p class="text-muted">An education experience designed around individual attention, outcome-based curricula, and mentorship.</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="icon-box icon-primary">
+                            <i class="bi bi-mortarboard-fill"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3">Industry Mentors</h4>
+                        <p class="text-muted mb-0">Learn directly from senior software developers and researchers active in the global tech space.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="icon-box icon-secondary">
+                            <i class="bi bi-file-earmark-code-fill"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3">Hands-on Labs</h4>
+                        <p class="text-muted mb-0">Every week wraps up with building functional web apps, games, or prompt tools from scratch.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="icon-box icon-accent">
+                            <i class="bi bi-award-fill"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3">Verified Certificates</h4>
+                        <p class="text-muted mb-0">Earn credentials upon completing core checkpoints, signed by our training committee.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="icon-box icon-secondary">
+                            <i class="bi bi-compass-fill"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3">Career Guidance</h4>
+                        <p class="text-muted mb-0">Get exclusive advice on framing student portfolios, writing CVs, and selecting higher studies paths.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="icon-box icon-primary">
+                            <i class="bi bi-chat-heart-fill"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3">Networking Avenues</h4>
+                        <p class="text-muted mb-0">Form close connections with peers, tech-enthusiasts, and organizers from around the globe.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="icon-box icon-accent">
+                            <i class="bi bi-shield-check"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3">Active Community</h4>
+                        <p class="text-muted mb-0">Gain permanent access to the Discord forum to discuss projects, check opportunities, and seek help.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Curriculum Timeline Section -->
+    <section id="curriculum" class="py-5" style="background: white;">
+        <div class="container py-5">
+            <div class="text-center max-width-600 mx-auto mb-5">
+                <span class="text-primary fw-bold text-uppercase small" style="letter-spacing: 1px;">Our Program Outline</span>
+                <h2 class="fw-bold mt-2">The 4-Week Learning Journey</h2>
+                <p class="text-muted">A structured curriculum designed to build capabilities systematically from foundational steps to building live portfolios.</p>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item timeline-left">
+                    <div class="timeline-content">
+                        <span class="badge bg-primary mb-2">WEEK 1</span>
+                        <h5 class="fw-bold mb-2">Introduction to Algorithmic Logic</h5>
+                        <p class="text-muted small mb-0">Understand computational thinking. Master flowcharts, logical loops, variables, and conditions through gamified blocks.</p>
+                    </div>
+                </div>
+                <div class="timeline-item timeline-right">
+                    <div class="timeline-content">
+                        <span class="badge bg-secondary mb-2">WEEK 2</span>
+                        <h5 class="fw-bold mb-2">Web Scaffolding & Design</h5>
+                        <p class="text-muted small mb-0">Get hands-on with HTML5, CSS3 foundations, responsive flexboxes, grids, and Bootstrap framework components.</p>
+                    </div>
+                </div>
+                <div class="timeline-item timeline-left">
+                    <div class="timeline-content">
+                        <span class="badge bg-primary mb-2">WEEK 3</span>
+                        <h5 class="fw-bold mb-2">Interactive JS Logic & APIs</h5>
+                        <p class="text-muted small mb-0">Integrate browser inputs. Write core logic handling events, fetching external REST APIs, and rendering active JSON cards.</p>
+                    </div>
+                </div>
+                <div class="timeline-item timeline-right">
+                    <div class="timeline-content">
+                        <span class="badge bg-secondary mb-2">WEEK 4</span>
+                        <h5 class="fw-bold mb-2">AI Integrations & Capstone Project</h5>
+                        <p class="text-muted small mb-0">Understand Prompt Engineering, build GPT-powered tools, integrate Firebase Auth/Store, and host Capstone web portals.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trainers Section -->
+    <section id="trainers" class="py-5 bg-light">
+        <div class="container py-5">
+            <div class="text-center max-width-600 mx-auto mb-5">
+                <span class="text-primary fw-bold text-uppercase small" style="letter-spacing: 1px;">Meet the Guides</span>
+                <h2 class="fw-bold mt-2">Our Lead Instructors</h2>
+                <p class="text-muted">Learn from experienced engineers, certified tutors, and developers passionate about computer education.</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="trainer-card">
+                        <div class="trainer-img-wrapper">
+                            <!-- Premium visual placeholder for trainer -->
+                            <div class="w-100 h-100 d-flex flex-column align-items-center justify-content-center bg-primary text-white p-4">
+                                <i class="bi bi-person-workspace" style="font-size: 5rem;"></i>
+                                <span class="fw-bold mt-3">Instructor Profile</span>
+                            </div>
+                            <div class="trainer-socials">
+                                <a href="#"><i class="bi bi-linkedin"></i></a>
+                                <a href="#"><i class="bi bi-github"></i></a>
+                                <a href="#"><i class="bi bi-twitter-x"></i></a>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h5 class="fw-bold mb-1">Dr. Amit Sharma</h5>
+                            <p class="text-secondary small mb-2">Chief AI Researcher</p>
+                            <p class="text-muted small mb-0">Ph.D. in Computer Science from IIT, with 10+ years teaching machine learning methodologies.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="trainer-card">
+                        <div class="trainer-img-wrapper">
+                            <div class="w-100 h-100 d-flex flex-column align-items-center justify-content-center bg-secondary text-white p-4">
+                                <i class="bi bi-person-video" style="font-size: 5rem;"></i>
+                                <span class="fw-bold mt-3">Instructor Profile</span>
+                            </div>
+                            <div class="trainer-socials">
+                                <a href="#"><i class="bi bi-linkedin"></i></a>
+                                <a href="#"><i class="bi bi-github"></i></a>
+                                <a href="#"><i class="bi bi-twitter-x"></i></a>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h5 class="fw-bold mb-1">Rohan Verma</h5>
+                            <p class="text-secondary small mb-2">Senior Full Stack Engineer</p>
+                            <p class="text-muted small mb-0">Ex-Amazon Engineer with extensive experience in cloud scaling architectures and JS frontends.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="trainer-card">
+                        <div class="trainer-img-wrapper">
+                            <div class="w-100 h-100 d-flex flex-column align-items-center justify-content-center bg-dark text-white p-4">
+                                <i class="bi bi-person-fill-check" style="font-size: 5rem;"></i>
+                                <span class="fw-bold mt-3">Instructor Profile</span>
+                            </div>
+                            <div class="trainer-socials">
+                                <a href="#"><i class="bi bi-linkedin"></i></a>
+                                <a href="#"><i class="bi bi-github"></i></a>
+                                <a href="#"><i class="bi bi-twitter-x"></i></a>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h5 class="fw-bold mb-1">Sneha Iyer</h5>
+                            <p class="text-secondary small mb-2">Curriculum Lead & UI/UX Expert</p>
+                            <p class="text-muted small mb-0">Designed modular learning assets adopted by over 20+ national schools and student camps.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-5" style="background: white;">
+        <div class="container py-5">
+            <div class="text-center max-width-600 mx-auto mb-5">
+                <span class="text-primary fw-bold text-uppercase small" style="letter-spacing: 1px;">Success Stories</span>
+                <h2 class="fw-bold mt-2">What Our Graduates Say</h2>
+                <p class="text-muted">Read feedback from students and parents regarding their classroom experiences and outcomes.</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="testimonial-card h-100">
+                        <div class="text-warning mb-2">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                        </div>
+                        <p class="text-muted small mb-4">"The 4-week program was perfect! My 12-year-old built a fully functional weather app using JavaScript and API key connections. Outstanding curriculum structure!"</p>
+                        <div class="d-flex align-items-center gap-3">
+                            <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center fw-bold" style="width: 40px; height: 40px; font-size: 0.85rem;">RK</div>
+                            <div>
+                                <h6 class="fw-bold mb-0 small">Rajesh Kumar</h6>
+                                <span class="text-muted small" style="font-size: 0.75rem;">Parent of Rahul</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="testimonial-card h-100">
+                        <div class="text-warning mb-2">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                        </div>
+                        <p class="text-muted small mb-4">"I loved the week on Prompt Engineering. Building a chatbot assistant to help me study history was super fun. The mentors explained logic simply."</p>
+                        <div class="d-flex align-items-center gap-3">
+                            <div class="bg-secondary text-white rounded-circle d-flex align-items-center justify-content-center fw-bold" style="width: 40px; height: 40px; font-size: 0.85rem;">AS</div>
+                            <div>
+                                <h6 class="fw-bold mb-0 small">Ananya Sen</h6>
+                                <span class="text-muted small" style="font-size: 0.75rem;">Graduated Student (15 yrs)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 offset-md-3 offset-lg-0">
+                    <div class="testimonial-card h-100">
+                        <div class="text-warning mb-2">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                        </div>
+                        <p class="text-muted small mb-4">"Best coding classes we have subscribed to. The Discord community keeps the student engaged, and the admin system makes tracking progress easy."</p>
+                        <div class="d-flex align-items-center gap-3">
+                            <div class="bg-dark text-white rounded-circle d-flex align-items-center justify-content-center fw-bold" style="width: 40px; height: 40px; font-size: 0.85rem;">MP</div>
+                            <div>
+                                <h6 class="fw-bold mb-0 small">Meera Patel</h6>
+                                <span class="text-muted small" style="font-size: 0.75rem;">Parent of Divya</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-5 bg-light">
+        <div class="container py-5">
+            <div class="text-center max-width-600 mx-auto mb-5">
+                <span class="text-primary fw-bold text-uppercase small" style="letter-spacing: 1px;">Got Questions?</span>
+                <h2 class="fw-bold mt-2">Frequently Asked Questions</h2>
+                <p class="text-muted">Find answers to key queries regarding registrations, system requirements, and curriculum setups.</p>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item border-0 shadow-sm">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                    Are there any pre-requisites or past coding requirements?
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body text-muted small">
+                                    No prior experience is necessary. We start from absolute scratch by using block-based game logic in Week 1, and gradually introduce syntax in HTML/CSS/JS step-by-step.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item border-0 shadow-sm">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    What are the technical system configurations needed?
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body text-muted small">
+                                    Any standard laptop or desktop computer running Windows, MacOS, or Linux with a stable internet connection and a modern web browser (Google Chrome or Mozilla Firefox) is sufficient.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item border-0 shadow-sm">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    How are the live sessions organized?
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body text-muted small">
+                                    Classes run live via Zoom virtual meeting links. They include 60 minutes of visual code walk-throughs, followed by 30 minutes of dedicated peer-programming and question-and-answer checkpoints.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item border-0 shadow-sm">
+                            <h2 class="accordion-header" id="headingFour">
+                                <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    How is the graduation certificate verified?
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body text-muted small">
+                                    Every certificate is cryptographically signed and stored in our validation log database, which lets schools or recruiters verify it using a unique hash identifier.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5" style="background: white;">
+        <div class="container py-5">
+            <div class="row gy-5 align-items-stretch">
+                <div class="col-lg-5">
+                    <div class="d-flex flex-column justify-content-between h-100 pe-lg-4">
+                        <div>
+                            <span class="text-primary fw-bold text-uppercase small" style="letter-spacing: 1px;">Get in Touch</span>
+                            <h2 class="fw-bold mt-2 mb-4">Have Questions? Talk to Our Advisors</h2>
+                            <p class="text-muted mb-5">Have unique requests, bulk student registrations, or seeking partnership avenues? Write to us, and our team will get in touch within 24 business hours.</p>
+                        </div>
+                        <div>
+                            <div class="d-flex align-items-start gap-3 mb-4">
+                                <div class="icon-box icon-primary m-0 flex-shrink-0" style="width: 45px; height: 45px; font-size: 1.1rem; border-radius: 8px;">
+                                    <i class="bi bi-envelope-fill"></i>
+                                </div>
+                                <div>
+                                    <h6 class="fw-bold mb-1">Email Address</h6>
+                                    <p class="text-muted small mb-0">support@kiddyai.in</p>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-start gap-3">
+                                <div class="icon-box icon-secondary m-0 flex-shrink-0" style="width: 45px; height: 45px; font-size: 1.1rem; border-radius: 8px;">
+                                    <i class="bi bi-telephone-fill"></i>
+                                </div>
+                                <div>
+                                    <h6 class="fw-bold mb-1">Phone Number</h6>
+                                    <p class="text-muted small mb-0">+91 98765 43210</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-7">
+                    <div class="card glass-panel p-4 p-md-5 border-0">
+                        <h4 class="fw-bold mb-4">Send a Message</h4>
+                        <form id="contact-form">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="contact-name" class="form-label small">Full Name <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control form-control-custom" id="contact-name" placeholder="John Doe" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="contact-email" class="form-label small">Email Address <span class="text-danger">*</span></label>
+                                    <input type="email" class="form-control form-control-custom" id="contact-email" placeholder="john@example.com" required>
+                                </div>
+                                <div class="col-12">
+                                    <label for="contact-phone" class="form-label small">Phone Number (Optional)</label>
+                                    <input type="tel" class="form-control form-control-custom" id="contact-phone" placeholder="9876543210">
+                                </div>
+                                <div class="col-12">
+                                    <label for="contact-message" class="form-label small">Your Message <span class="text-danger">*</span></label>
+                                    <textarea class="form-control form-control-custom" id="contact-message" rows="4" placeholder="How can we help you?" required></textarea>
+                                </div>
+                                <div class="col-12 mt-4">
+                                    <button type="submit" class="btn btn-primary-custom w-100 py-3">Send Inquiry Message</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-5">
+        <div class="container">
+            <div class="row gy-4 mb-4">
+                <div class="col-lg-4">
+                    <h5 class="fw-bold mb-3 text-white"><i class="bi bi-rocket-takeoff-fill text-primary"></i> Kiddy.ai</h5>
+                    <p class="small text-muted mb-4" style="max-width: 300px;">Providing quality computer science and artificial intelligence concepts to the future workforce of innovators.</p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="fs-5"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="fs-5"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="fs-5"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="fs-5"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 col-lg-2 offset-lg-2">
+                    <h6 class="fw-bold text-white mb-3">Quick Links</h6>
+                    <ul class="list-unstyled mb-0 d-flex flex-column gap-2 small">
+                        <li><a href="#hero">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#curriculum">Curriculum</a></li>
+                        <li><a href="#trainers">Trainers</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-3 col-lg-2">
+                    <h6 class="fw-bold text-white mb-3">Support</h6>
+                    <ul class="list-unstyled mb-0 d-flex flex-column gap-2 small">
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="login.html">Student Login</a></li>
+                        <li><a href="register.html">Register Now</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 col-lg-2">
+                    <h6 class="fw-bold text-white mb-3">Contact Info</h6>
+                    <ul class="list-unstyled mb-0 d-flex flex-column gap-2 small text-muted">
+                        <li><i class="bi bi-geo-alt me-2"></i> Outer Ring Road, Bangalore, India</li>
+                        <li><i class="bi bi-telephone me-2"></i> +91 98765 43210</li>
+                        <li><i class="bi bi-envelope me-2"></i> support@kiddyai.in</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="border-secondary my-4">
+            <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center gap-3">
+                <span class="small text-muted">&copy; 2026 Kiddy.ai. All rights reserved.</span>
+                <span class="small text-muted">Designed & Developed by Antigravity for Kiddy.ai</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Dynamic Auth Navbar Handler -->
+    <script type="module">
+        import { db } from "./js/firebase-config.js";
+        import { doc, getDoc } from "./js/firebase-config.js";
+        import { watchAuthState, clerkLoadedPromise } from "./js/auth.js";
+
+        watchAuthState(async (user) => {
+            const navAuthBox = document.getElementById("nav-auth-buttons");
+            if (!navAuthBox) return;
+
+            if (user) {
+                try {
+                    const docSnap = await getDoc(doc(db, "users", user.uid));
+                    let dashPage = "dashboard.html";
+                    
+                    if (docSnap.exists() && docSnap.data().role === "admin") {
+                        dashPage = "admin.html";
+                    }
+
+                    navAuthBox.innerHTML = `
+                        <div class="d-flex align-items-center gap-2">
+                            <a href="${dashPage}" class="btn btn-outline-custom btn-sm px-3"><i class="bi bi-grid-fill me-1"></i> Dashboard</a>
+                            <div id="clerk-user-button" style="min-width: 28px; min-height: 28px;"></div>
+                        </div>
+                    `;
+
+                    // Mount Clerk User Button
+                    const clerk = await clerkLoadedPromise;
+                    clerk.mountUserButton(document.getElementById("clerk-user-button"));
+                } catch (err) {
+                    console.error("Nav state error:", err);
+                }
+            } else {
+                navAuthBox.innerHTML = `
+                    <a href="login.html" class="btn btn-outline-custom me-2 btn-sm px-3">Login</a>
+                    <a href="register.html" class="btn btn-primary-custom btn-sm px-3 text-white">Register</a>
+                `;
+            }
+        });
+        
+        // Sticky Navbar scroll shadow
+        window.addEventListener("scroll", () => {
+            const nav = document.querySelector(".navbar-custom");
+            if (window.scrollY > 50) {
+                nav.classList.add("scrolled");
+            } else {
+                nav.classList.remove("scrolled");
+            }
+        });
+    </script>
+    
+    <!-- Contact form connection -->
+    <script type="module" src="js/contact.js"></script>
+</body>
+</html>
