@@ -1,43 +1,45 @@
 /* ==========================================
-   Kiddy.ai Premium Dark Coding Design System
+   Kiddy.ai Premium Gold & Navy Coding Design System
+   Inspired by SolidFrame constructions
    Designed by Antigravity
    ========================================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap');
 
 :root {
-    --primary: #6366F1; /* Indigo */
-    --primary-hover: #4F46E5;
-    --primary-light: rgba(99, 102, 241, 0.12);
-    --secondary: #A855F7; /* Purple */
-    --secondary-hover: #9333EA;
-    --secondary-light: rgba(168, 85, 247, 0.12);
-    --accent: #2DD4BF; /* Teal */
-    --accent-hover: #14B8A6;
-    --accent-light: rgba(45, 212, 191, 0.12);
+    /* Muted Luxury Gold Palette */
+    --primary: #C5A85C;          /* Muted Gold */
+    --primary-hover: #B3964B;
+    --primary-light: rgba(197, 168, 92, 0.12);
+    --secondary: #E2C784;        /* Light Muted Gold / Champagne */
+    --secondary-hover: #D1B673;
+    --secondary-light: rgba(226, 199, 132, 0.12);
+    --accent: #E2C784;
+    --accent-hover: #C5A85C;
+    --accent-light: rgba(197, 168, 92, 0.08);
     
     --warning: #F59E0B;
     --danger: #EF4444;
     --success: #10B981;
     
-    /* Premium Dark Theme Grays */
-    --background: #030712;       /* Deepest Slate */
-    --background-alt: #090f1e;   /* Secondary Section Dark */
-    --panel-bg: rgba(15, 23, 42, 0.65); /* Slate 900 Glass */
-    --card-bg: rgba(30, 41, 59, 0.45);  /* Slate 800 Glass */
-    --text-main: #F9FAFB;        /* Near White */
-    --text-muted: #9CA3AF;       /* Cool Gray */
-    --text-dark: #111827;
-    --border-color: rgba(255, 255, 255, 0.08);
-    --border-hover: rgba(99, 102, 241, 0.25);
+    /* SolidFrame Premium Navy Grays */
+    --background: #070C19;       /* Solid Deep Navy */
+    --background-alt: #0D1527;   /* Secondary Navy Panel */
+    --panel-bg: rgba(11, 19, 43, 0.75); /* Navy Glass */
+    --card-bg: rgba(21, 34, 69, 0.45);  /* Card Navy Glass */
+    --text-main: #F8F9FA;        /* Off White */
+    --text-muted: #94A3B8;       /* Muted Steel Blue */
+    --text-dark: #070C19;        /* Deep Navy Contrast */
+    --border-color: rgba(197, 168, 92, 0.14);
+    --border-hover: rgba(197, 168, 92, 0.4);
     
     --font-heading: 'Outfit', sans-serif;
     --font-body: 'Inter', sans-serif;
     
     --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-    --shadow-md: 0 8px 16px -2px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
-    --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.6), 0 10px 10px -5px rgba(0, 0, 0, 0.3);
-    --shadow-xl: 0 25px 50px -12px rgba(99, 102, 241, 0.15), 0 12px 24px -10px rgba(0, 0, 0, 0.5);
+    --shadow-md: 0 8px 16px -2px rgba(0, 0, 0, 0.5), 0 4px 6px -2px rgba(0, 0, 0, 0.3);
+    --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.7), 0 10px 10px -5px rgba(0, 0, 0, 0.4);
+    --shadow-xl: 0 25px 50px -12px rgba(197, 168, 92, 0.1), 0 12px 24px -10px rgba(0, 0, 0, 0.6);
     
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -72,7 +74,7 @@ h1, h2, h3, h4, h5, h6 {
     background: var(--background);
 }
 ::-webkit-scrollbar-thumb {
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(197, 168, 92, 0.2);
     border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
@@ -120,9 +122,9 @@ section#about, section#curriculum, section#contact, section.py-5 {
     border-color: var(--border-hover);
 }
 
-/* Gradient text */
+/* Gold Gradient text */
 .text-gradient {
-    background: linear-gradient(135deg, #818CF8 0%, #C084FC 50%, #2DD4BF 100%);
+    background: linear-gradient(135deg, #C5A85C 0%, #E2C784 50%, #FFFFFF 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -131,7 +133,7 @@ section#about, section#curriculum, section#contact, section.py-5 {
 
 /* Custom Navbar */
 .navbar-custom, nav.navbar.bg-dark {
-    background: rgba(3, 7, 18, 0.75) !important;
+    background: rgba(7, 12, 25, 0.8) !important;
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
     border-bottom: 1px solid var(--border-color) !important;
@@ -141,7 +143,7 @@ section#about, section#curriculum, section#contact, section.py-5 {
 .navbar-custom.scrolled, nav.navbar.bg-dark {
     padding: 12px 0;
     box-shadow: var(--shadow-md);
-    background: rgba(3, 7, 18, 0.9) !important;
+    background: rgba(7, 12, 25, 0.95) !important;
 }
 .navbar-brand {
     font-family: var(--font-heading);
@@ -149,6 +151,9 @@ section#about, section#curriculum, section#contact, section.py-5 {
     font-size: 1.6rem;
     color: var(--text-main) !important;
     letter-spacing: -0.03em;
+}
+.navbar-brand span.text-warning {
+    color: var(--primary) !important; /* Force Warning brand highlights to Gold */
 }
 .nav-link {
     font-family: var(--font-body);
@@ -174,7 +179,7 @@ section#about, section#curriculum, section#contact, section.py-5 {
 /* Hero Section */
 .hero-section {
     padding: 160px 0 100px 0;
-    background: radial-gradient(circle at 80% 20%, rgba(99, 102, 241, 0.15) 0%, rgba(168, 85, 247, 0.08) 40%, transparent 80%), var(--background) !important;
+    background: radial-gradient(circle at 80% 20%, rgba(197, 168, 92, 0.12) 0%, rgba(7, 12, 25, 0.1) 50%, transparent 80%), var(--background) !important;
 }
 .hero-title {
     font-size: 3.75rem;
@@ -191,7 +196,7 @@ section#about, section#curriculum, section#contact, section.py-5 {
 
 /* Buttons */
 .btn {
-    border-radius: 10px;
+    border-radius: 8px; /* Slightly sharper construction borders */
     font-weight: 600;
     padding: 0.75rem 1.75rem;
     transition: var(--transition-smooth);
@@ -199,28 +204,27 @@ section#about, section#curriculum, section#contact, section.py-5 {
 .btn-primary-custom {
     background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
     border: none;
-    color: white !important;
-    box-shadow: 0 4px 20px rgba(99, 102, 241, 0.35);
+    color: var(--text-dark) !important;
+    box-shadow: 0 4px 20px rgba(197, 168, 92, 0.3);
     background-size: 150% auto;
 }
 .btn-primary-custom:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 24px rgba(99, 102, 241, 0.5);
+    box-shadow: 0 6px 24px rgba(197, 168, 92, 0.45);
     background-position: right center;
 }
 
 .btn-secondary-custom {
-    background: linear-gradient(135deg, var(--accent) 0%, #06B6D4 100%);
-    border: none;
-    color: var(--text-dark) !important;
-    box-shadow: 0 4px 20px rgba(45, 212, 191, 0.25);
-    background-size: 150% auto;
+    background: transparent;
+    border: 2px solid var(--primary);
+    color: var(--primary) !important;
+    box-shadow: 0 4px 20px rgba(197, 168, 92, 0.1);
 }
 .btn-secondary-custom:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 24px rgba(45, 212, 191, 0.45);
-    background-position: right center;
+    background: var(--primary);
     color: var(--text-dark) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 24px rgba(197, 168, 92, 0.35);
 }
 
 .btn-outline-custom {
@@ -230,18 +234,19 @@ section#about, section#curriculum, section#contact, section.py-5 {
 }
 .btn-outline-custom:hover {
     background: rgba(255, 255, 255, 0.05);
-    border-color: var(--text-main);
+    border-color: var(--primary);
+    color: var(--primary) !important;
     transform: translateY(-2px);
 }
 
 .btn-light {
-    background-color: rgba(255, 255, 255, 0.05) !important;
+    background-color: rgba(197, 168, 92, 0.08) !important;
     border: 1px solid var(--border-color) !important;
-    color: var(--text-muted) !important;
+    color: var(--primary) !important;
 }
 .btn-light:hover, .btn-light.active {
     background-color: var(--primary) !important;
-    color: white !important;
+    color: var(--text-dark) !important;
     border-color: var(--primary) !important;
 }
 
@@ -249,7 +254,7 @@ section#about, section#curriculum, section#contact, section.py-5 {
 .card {
     background-color: var(--panel-bg);
     border: 1px solid var(--border-color);
-    border-radius: 16px;
+    border-radius: 12px;
     box-shadow: var(--shadow-md);
     transition: var(--transition-smooth);
 }
@@ -260,7 +265,7 @@ section#about, section#curriculum, section#contact, section.py-5 {
 .feature-card {
     border: 1px solid var(--border-color);
     background-color: var(--card-bg);
-    border-radius: 18px;
+    border-radius: 14px;
     padding: 3rem 2.25rem;
     transition: var(--transition-smooth);
     height: 100%;
@@ -274,7 +279,7 @@ section#about, section#curriculum, section#contact, section.py-5 {
     left: 0;
     width: 100%;
     height: 100%;
-    background: radial-gradient(circle at 10% 10%, rgba(99, 102, 241, 0.06) 0%, transparent 60%);
+    background: radial-gradient(circle at 10% 10%, rgba(197, 168, 92, 0.04) 0%, transparent 60%);
     pointer-events: none;
 }
 .feature-card:hover {
@@ -286,7 +291,7 @@ section#about, section#curriculum, section#contact, section.py-5 {
 .icon-box {
     width: 60px;
     height: 60px;
-    border-radius: 14px;
+    border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -299,18 +304,18 @@ section#about, section#curriculum, section#contact, section.py-5 {
 }
 .icon-primary {
     background: var(--primary-light);
-    color: #818CF8;
-    border: 1px solid rgba(99, 102, 241, 0.2);
+    color: var(--secondary);
+    border: 1px solid rgba(197, 168, 92, 0.2);
 }
 .icon-secondary {
-    background: var(--secondary-light);
-    color: #C084FC;
-    border: 1px solid rgba(168, 85, 247, 0.2);
+    background: rgba(255, 255, 255, 0.05);
+    color: #FFFFFF;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 .icon-accent {
     background: var(--accent-light);
-    color: var(--accent);
-    border: 1px solid rgba(45, 212, 191, 0.2);
+    color: var(--primary);
+    border: 1px solid rgba(197, 168, 92, 0.15);
 }
 
 /* Visual Block Editor Mock (Hero Section) */
@@ -319,11 +324,11 @@ section#about, section#curriculum, section#contact, section.py-5 {
 }
 .code-block-item {
     padding: 12px 18px;
-    border-radius: 12px;
+    border-radius: 8px;
     font-size: 0.85rem;
     font-family: var(--font-heading);
     font-weight: 600;
-    color: white;
+    color: var(--text-dark);
     display: flex;
     align-items: center;
     width: 100%;
@@ -336,21 +341,27 @@ section#about, section#curriculum, section#contact, section.py-5 {
     transform: scale(1.04) translateY(-2px);
     box-shadow: var(--shadow-lg);
 }
+
+/* Architecture Metal Colors (Muted Golds and Bronze) */
 .block-orange {
-    background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
-    box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+    background: linear-gradient(135deg, #A48743 0%, #7E6325 100%);
+    color: white;
+    box-shadow: 0 4px 15px rgba(164, 135, 67, 0.3);
 }
 .block-indigo {
-    background: linear-gradient(135deg, #6366F1 0%, #4F46E5 100%);
-    box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+    background: linear-gradient(135deg, #C5A85C 0%, #9A7E38 100%);
+    color: var(--text-dark);
+    box-shadow: 0 4px 15px rgba(197, 168, 92, 0.3);
 }
 .block-teal {
-    background: linear-gradient(135deg, #14B8A6 0%, #0D9488 100%);
-    box-shadow: 0 4px 15px rgba(20, 184, 166, 0.3);
+    background: linear-gradient(135deg, #D5B86C 0%, #A48743 100%);
+    color: var(--text-dark);
+    box-shadow: 0 4px 15px rgba(213, 184, 108, 0.3);
 }
 .block-purple {
-    background: linear-gradient(135deg, #A855F7 0%, #9333EA 100%);
-    box-shadow: 0 4px 15px rgba(168, 85, 247, 0.3);
+    background: linear-gradient(135deg, #E5C87C 0%, #B49652 100%);
+    color: var(--text-dark);
+    box-shadow: 0 4px 15px rgba(229, 200, 124, 0.3);
 }
 
 .block-connector {
@@ -368,7 +379,7 @@ section#about, section#curriculum, section#contact, section.py-5 {
     border-radius: 50%;
     left: -2px;
     top: 0;
-    box-shadow: 0 0 10px #FFF, 0 0 5px var(--accent);
+    box-shadow: 0 0 10px #FFF, 0 0 5px var(--primary);
     animation: flowDown 1.8s infinite linear;
 }
 @keyframes flowDown {
@@ -387,12 +398,12 @@ section#about, section#curriculum, section#contact, section.py-5 {
     content: '';
     position: absolute;
     width: 3px;
-    background: linear-gradient(to bottom, var(--primary) 0%, var(--secondary) 50%, var(--accent) 100%);
+    background: linear-gradient(to bottom, var(--primary) 0%, var(--secondary) 50%, #FFFFFF 100%);
     top: 0;
     bottom: 0;
     left: 50%;
     margin-left: -1.5px;
-    box-shadow: 0 0 15px rgba(99, 102, 241, 0.3);
+    box-shadow: 0 0 15px rgba(197, 168, 92, 0.2);
 }
 @media (max-width: 768px) {
     .timeline::after {
@@ -424,7 +435,7 @@ section#about, section#curriculum, section#contact, section.py-5 {
     border-radius: 50%;
     z-index: 1;
     transition: var(--transition-smooth);
-    box-shadow: 0 0 8px rgba(99, 102, 241, 0.5);
+    box-shadow: 0 0 8px rgba(197, 168, 92, 0.4);
 }
 @media (max-width: 768px) {
     .timeline-item::after {
@@ -455,7 +466,7 @@ section#about, section#curriculum, section#contact, section.py-5 {
     padding: 24px 30px;
     background-color: var(--card-bg);
     position: relative;
-    border-radius: 16px;
+    border-radius: 12px;
     box-shadow: var(--shadow-md);
     border: 1px solid var(--border-color);
     transition: var(--transition-smooth);
@@ -466,14 +477,14 @@ section#about, section#curriculum, section#contact, section.py-5 {
     box-shadow: var(--shadow-lg);
 }
 .timeline-item:hover::after {
-    background-color: var(--accent);
-    border-color: var(--accent);
-    box-shadow: 0 0 12px var(--accent);
+    background-color: var(--secondary);
+    border-color: var(--secondary);
+    box-shadow: 0 0 12px var(--secondary);
 }
 
 /* Trainers Section */
 .trainer-card {
-    border-radius: 20px;
+    border-radius: 16px;
     overflow: hidden;
     background: var(--card-bg);
     border: 1px solid var(--border-color);
@@ -503,7 +514,7 @@ section#about, section#curriculum, section#contact, section.py-5 {
     bottom: -60px;
     left: 0;
     right: 0;
-    background: rgba(15, 23, 42, 0.85);
+    background: rgba(7, 12, 25, 0.9);
     backdrop-filter: blur(8px);
     padding: 15px;
     display: flex;
@@ -527,7 +538,7 @@ section#about, section#curriculum, section#contact, section.py-5 {
 /* Testimonials */
 .testimonial-card {
     background: var(--card-bg);
-    border-radius: 18px;
+    border-radius: 14px;
     padding: 2.5rem;
     box-shadow: var(--shadow-md);
     border: 1px solid var(--border-color);
@@ -544,7 +555,7 @@ section#about, section#curriculum, section#contact, section.py-5 {
     top: 10px;
     left: 20px;
     font-size: 5rem;
-    color: rgba(99, 102, 241, 0.12);
+    color: rgba(197, 168, 92, 0.08);
     font-family: var(--font-heading);
     line-height: 1;
 }
@@ -555,7 +566,7 @@ section#about, section#curriculum, section#contact, section.py-5 {
 }
 .accordion-item {
     border: 1px solid var(--border-color) !important;
-    border-radius: 14px !important;
+    border-radius: 10px !important;
     margin-bottom: 0.85rem;
     background-color: var(--card-bg) !important;
     overflow: hidden;
@@ -573,7 +584,7 @@ section#about, section#curriculum, section#contact, section.py-5 {
     padding: 1.25rem 1.5rem;
 }
 .accordion-button:not(.collapsed) {
-    background-color: rgba(99, 102, 241, 0.05) !important;
+    background-color: rgba(197, 168, 92, 0.04) !important;
     color: var(--primary) !important;
     box-shadow: none;
 }
@@ -581,7 +592,7 @@ section#about, section#curriculum, section#contact, section.py-5 {
     box-shadow: none;
 }
 .accordion-button::after {
-    filter: invert(1);
+    filter: invert(0.85) sepia(0.4) saturate(2) hue-rotate(5deg);
 }
 .accordion-body {
     color: var(--text-muted);
@@ -593,7 +604,7 @@ section#about, section#curriculum, section#contact, section.py-5 {
 
 /* Footer Styling */
 footer {
-    background-color: #020617 !important;
+    background-color: #040812 !important;
     border-top: 1px solid var(--border-color);
     color: var(--text-muted);
     position: relative;
@@ -614,21 +625,21 @@ footer a:hover {
 
 /* Form Styles */
 .form-control-custom {
-    background-color: rgba(255, 255, 255, 0.03) !important;
+    background-color: rgba(255, 255, 255, 0.02) !important;
     border: 1px solid var(--border-color) !important;
-    border-radius: 10px;
+    border-radius: 8px;
     padding: 0.85rem 1.15rem;
     color: var(--text-main) !important;
     transition: var(--transition-smooth);
 }
 .form-control-custom:focus {
-    background-color: rgba(255, 255, 255, 0.05) !important;
+    background-color: rgba(255, 255, 255, 0.04) !important;
     border-color: var(--primary) !important;
-    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.25) !important;
+    box-shadow: 0 0 0 3px rgba(197, 168, 92, 0.2) !important;
     outline: none;
 }
 .form-control-custom::placeholder {
-    color: rgba(255, 255, 255, 0.3) !important;
+    color: rgba(255, 255, 255, 0.25) !important;
 }
 .form-label {
     font-weight: 600;
@@ -637,12 +648,12 @@ footer a:hover {
     color: var(--text-muted);
 }
 .form-select.form-control-custom {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%239CA3AF' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e") !important;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23C5A85C' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e") !important;
     background-position: right 1rem center !important;
     background-size: 16px 12px !important;
 }
 .form-select.form-control-custom option {
-    background-color: #0b0f19 !important;
+    background-color: #070c19 !important;
     color: var(--text-main) !important;
 }
 
@@ -656,9 +667,9 @@ footer a:hover {
 }
 .toast-custom {
     min-width: 320px;
-    background: #0f172a;
+    background: #0b132b;
     box-shadow: var(--shadow-xl);
-    border-radius: 14px;
+    border-radius: 10px;
     padding: 18px;
     margin-bottom: 12px;
     border: 1px solid var(--border-color);
@@ -717,7 +728,7 @@ footer a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(3, 7, 18, 0.85);
+    background-color: rgba(7, 12, 25, 0.85);
     backdrop-filter: blur(6px);
     display: flex;
     justify-content: center;
@@ -733,11 +744,11 @@ footer a:hover {
 .spinner-custom {
     width: 55px;
     height: 55px;
-    border: 5px solid rgba(99, 102, 241, 0.1);
+    border: 5px solid rgba(197, 168, 92, 0.1);
     border-top: 5px solid var(--primary);
     border-radius: 50%;
     animation: spin 1s linear infinite;
-    box-shadow: 0 0 15px rgba(99, 102, 241, 0.2);
+    box-shadow: 0 0 15px rgba(197, 168, 92, 0.2);
 }
 @keyframes spin {
     0% { transform: rotate(0deg); }
@@ -756,12 +767,12 @@ footer a:hover {
 /* Dark Mode Bootstrap Tables Overrides */
 .table {
     --bs-table-bg: transparent !important;
-    --bs-table-hover-bg: rgba(255, 255, 255, 0.03) !important;
+    --bs-table-hover-bg: rgba(255, 255, 255, 0.02) !important;
     --bs-table-color: var(--text-main) !important;
     --bs-table-border-color: var(--border-color) !important;
 }
 .table-light {
-    --bs-table-bg: rgba(255, 255, 255, 0.04) !important;
+    --bs-table-bg: rgba(255, 255, 255, 0.03) !important;
     --bs-table-color: var(--text-main) !important;
 }
 th {
@@ -782,21 +793,21 @@ td {
 
 /* Dropdown Menu Overrides */
 .dropdown-menu {
-    background-color: #0f172a !important;
+    background-color: #0b132b !important;
     border: 1px solid var(--border-color) !important;
     box-shadow: var(--shadow-xl) !important;
-    border-radius: 14px !important;
+    border-radius: 10px !important;
     padding: 10px !important;
 }
 .dropdown-item {
     color: var(--text-muted) !important;
-    border-radius: 8px !important;
+    border-radius: 6px !important;
     padding: 8px 16px !important;
     font-weight: 500;
 }
 .dropdown-item:hover {
     background-color: var(--primary-light) !important;
-    color: var(--text-main) !important;
+    color: var(--primary) !important;
 }
 .dropdown-divider {
     border-color: var(--border-color) !important;
@@ -804,9 +815,9 @@ td {
 
 /* Modals Override */
 .modal-content {
-    background-color: #0b1120 !important;
+    background-color: #090f20 !important;
     border: 1px solid var(--border-color) !important;
-    border-radius: 20px !important;
+    border-radius: 16px !important;
     box-shadow: var(--shadow-lg) !important;
     overflow: hidden;
 }
@@ -825,7 +836,7 @@ td {
     color: var(--text-main) !important;
 }
 .btn-close {
-    filter: invert(1) grayscale(1) brightness(1.5);
+    filter: invert(0.85) sepia(0.4) saturate(2) hue-rotate(5deg);
 }
 
 /* Pulse animation helper */
@@ -839,7 +850,7 @@ td {
 
 /* Code block highlight styles */
 .code-block-item .fw-bold {
-    color: var(--accent) !important;
+    color: var(--secondary) !important;
 }
 
 /* Admin Dashboard Extra Polish */
@@ -850,7 +861,7 @@ td {
     font-family: var(--font-heading);
     font-weight: 800;
     letter-spacing: -0.02em;
-    background: linear-gradient(135deg, #FFF 0%, #9CA3AF 100%);
+    background: linear-gradient(135deg, #FFF 0%, var(--primary) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
